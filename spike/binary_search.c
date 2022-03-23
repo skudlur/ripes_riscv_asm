@@ -1,6 +1,6 @@
 // Program to run a binary search on a 1-D array on Spike Sim
 
-#include <stdio.h>
+#include<stdio.h>
 
 int BinarySearch(int arr[], int start_in, int end_in, int elem) {
    while (start_in <= end_in){
@@ -14,6 +14,7 @@ int BinarySearch(int arr[], int start_in, int end_in, int elem) {
    }
    return -1;
 }
+
 int main(void) {
    int arr[] = {
      1,7,4,2,3,4,5,3,1,100,2,3,213,23,56,3,1,434,3432,43,234,1,235,12,9569,54,334,958,6969,
