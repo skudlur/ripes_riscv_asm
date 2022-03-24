@@ -1,4 +1,4 @@
-// Program to run a binary search on a 1-D array on Spike Sim
+// Program to run a binary search on a 1-D array on Shakti C Class RISC-V Processor
 
 #include<stdio.h>
 #include<uart.h>
