@@ -39,13 +39,18 @@ unsigned long read_cycles(void) {
 }
 
 int main() {
+    start = read_cycles();
     int i, numarr[20];
     int size = sizeof numarr / sizeof numarr;
 
     numarr[20] = {54,23,12,65,21,4,13,12,77,65,98,78,56,23,32,49,11,2,0,21};
 
     quicksort(numarr,0,19);
-
+    
+    end = read_cycles();
+    total = (double)(end - start);
+    printf("Total time taken on computation: %lu\n", total);
+    
     for(i=0;i<count;i++)
         printf(" %d", numarr[i]);
 }
