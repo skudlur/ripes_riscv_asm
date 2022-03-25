@@ -13,6 +13,7 @@ unsigned long read_cycles(void) {
 }
 
 int main() {
+    start = read_cycles();
     int i, n=100;
     int t1 = 0, t2 = 1;
 
@@ -26,5 +27,10 @@ int main() {
         t2 = nt;
         nt = t1 + t2;
     }
+    
+    end = read_cycles();
+    total = (double)(end - start);
+    printf("Total time taken on computation: %lu\n", total);
+    
     return 0;
 }
