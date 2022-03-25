@@ -23,6 +23,7 @@ unsigned long read_cycles(void) {
 }
 
 int main(void) {
+   start = read_cycles();
    int arr[] = {
      1,7,4,2,3,4,5,3,1,100,2,3,213,23,56,3,1,434,3432,43,234,1,235,12,9569,54,334,958,6969,
      1234,23,2,23,4,565,3,43,12,4,6,8,888,65,45,4334,312,39893,32,56,65
@@ -31,6 +32,11 @@ int main(void) {
    int n = 50;
    int elem = 12;
    int found_in = BinarySearch(arr, 0, n-1, elem);
+   
+   end = read_cycles();
+   total = (double)(end - start);
+   printf("Total time taken on computation: %lu\n", total);
+   
    if(found_in == -1 ) {
       printf("Element not found in the array ");
    }
