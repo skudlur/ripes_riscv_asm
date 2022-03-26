@@ -15,7 +15,7 @@ void quicksort(int numarr[20], int first, int last) {
         while(i<j) {
             while(numarr[i]<=numarr[p]&&i<last)
                 i++;
-            while(numarr[j]>number[p])
+            while(numarr[j]>numarr[p])
                 j--;
             if(i<j) {
                 t = numarr[i];
@@ -39,11 +39,12 @@ unsigned long read_cycles(void) {
 }
 
 int main() {
+    unsigned long start, end, total;
     start = read_cycles();
-    int i, numarr[20];
-    int size = sizeof numarr / sizeof numarr;
+    int i;
+    int count = 0;
 
-    numarr[20] = {54,23,12,65,21,4,13,12,77,65,98,78,56,23,32,49,11,2,0,21};
+    int numarr[20] = {54,23,12,65,21,4,13,12,77,65,98,78,56,23,32,49,11,2,0,21};
 
     quicksort(numarr,0,19);
     
