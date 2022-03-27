@@ -1,1 +1,1 @@
-
+Program runs on Shakti C class but does not show accurate results. The problem seems to be the 32 bit config, this can be fixed with the makefile of the program targetted to run on a 64 bit ISA. Although I still doubt to get an accurate result with 64 bit but I will update this when I try that out.
