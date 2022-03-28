@@ -2,15 +2,15 @@ module matmul(A,B,y,clk);
     input logic [31:0] A;
     input logic [31:0] B;
     output logic [31:0] y;
-	 input logic clk;
+    input logic clk;
    
     logic [7:0] A1 [0:1][0:1];
     logic [7:0] B1 [0:1][0:1];
     logic [7:0] y1 [0:1][0:1]; 
     integer i,j,k;
 
-	 // check for max freq 
-	 // initialize matrix values in BRAM
+    // check for max freq 
+    // initialize matrix values in BRAM
 	 
     always @(posedge clk) // add a clock
     begin
