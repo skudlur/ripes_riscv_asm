@@ -1,0 +1,1 @@
+Quicksort ran well on both. Better results on the Shakti C class processor over the Spike Sim. Not sure why the Spike has extra cycles, might possibly be something to do with the bbl loader and the extra output functions.
