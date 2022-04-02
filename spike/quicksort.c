@@ -31,14 +31,26 @@ void quicksort(int numarr[20], int first, int last) {
     }
 }
 
-int main() {
-    int i, numarr[20];
-    int size = sizeof numarr / sizeof numarr;
+unsigned long read_cycles(void) {
+    unsigned long cycles;
+    asm volatile ("rdcycle %0" : "=r" (cycles));
+    return cycles;
+}
 
-    numarr[20] = {54,23,12,65,21,4,13,12,77,65,98,78,56,23,32,49,11,2,0,21};
+int main() {
+    unsigned long start, end, total;
+    start = read_cycles();
+    int i;
+    int count = 0;
+
+    int numarr[20] = {54,23,12,65,21,4,13,12,77,65,98,78,56,23,32,49,11,2,0,21};
 
     quicksort(numarr,0,19);
-
+    
+    end = read_cycles();
+    total = (double)(end - start);
+    printf("Total time taken on computation: %lu\n", total);
+    
     for(i=0;i<count;i++)
         printf(" %d", numarr[i]);
 }
