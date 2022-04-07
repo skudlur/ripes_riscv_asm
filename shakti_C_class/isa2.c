@@ -20,12 +20,12 @@ int main() {
   *p1 = 0x4; //input b for slave register 1
 
   p1 = (int *)0x00041008; //address to slave register 2
-  *p1 = 0x5; //input a for slave register 2
+  *p1 = 0x5; //input co for slave register 2
 
   p1 = (int *)0x0004100c; //address to slave register 3
 
   end = read_cycles();
-  printf("%x\n",*p2); //display the contents of the slave register 3 
+  printf("%x\n",*p1); //display the contents of the slave register 3 
   total = end-start;
   printf("Total time taken on computation: %lu\n", total); //measure cycle count
 }
