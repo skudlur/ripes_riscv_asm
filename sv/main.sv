@@ -29,7 +29,8 @@ module main(
     int i=0;
     int j=0;
 
-    logic [15:0]w= 16'b0;
+    logic [15:0]w = 16'b0;
+    logic [15:0]x = 16'b0;
     int vari = 0;
     
     always_comb begin
@@ -59,6 +60,7 @@ module main(
         if (co == 3'b101) begin
             q = a+b;
             for(j=0;j<9;j++) begin
+                x = w;
                 w = q;
                 q = q+w;
             end
