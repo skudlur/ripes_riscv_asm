@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<uart.h>
+
 unsigned long read_cycles(void) {
   unsigned long cycles;
   asm volatile  ("rdcycle %0" : "=r" (cycles));
