@@ -1,0 +1,1 @@
+This was a bit tricky, the slave registers are not mapped properly to logic registers within the module(idk how to yet) so this was difficult to get right. Apart from that, the code ran fine for all the submodules except fib(wip).
