@@ -11,6 +11,6 @@ unsigned long read_cycles(void) {
 void main() {
 	unsigned long start, end, total;
 	start = read_cycles();
-	int i = 10;
-	printf("%d", i);
+	int input = 1600, output = 1600;
+	printf("%d, %d", input, output);
 }
