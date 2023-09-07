@@ -2,7 +2,6 @@
  * */
 
 #include<stdio.h>
-#include<uart.h>
 
 void quicksort(int numarr[20], int first, int last) {
     int i, j, p, t;

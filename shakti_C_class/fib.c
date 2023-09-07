@@ -4,7 +4,6 @@
  * */
 
 #include<stdio.h>
-#include<uart.h>
 
 unsigned long read_cycles(void) {
     unsigned long cycles;
@@ -31,6 +30,6 @@ void main() {
     
     end = read_cycles();
     total = (double)(end - start);
-    printf("Total time taken on computation: %lu\n", total);
+    printf("\nTotal time taken on computation: %lu\n", total);
     
 }
